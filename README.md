@@ -171,10 +171,55 @@
 
 
 
+**Задание 4**
+
+1. Объявите в файле outputs.tf один output , содержащий: instance_name, external_ip, fqdn для каждой из ВМ в удобном лично для вас формате.(без хардкода!!!)
+
+2. Примените изменения.
+
+В качестве решения приложите вывод значений ip-адресов команды terraform output.
+
+
+**Решение 4**
+
+Запишем в ранее пустой файл outputs.tf выражения для вывода данных о созданных машинах, и применим.
+
+После terraform apply видими результат работы output 
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/020c5bc2f77eed30a3297cf85c696c56b63404c8/IMG/24.jpg)
 
 
 
 
+**Задание 5**
+
+1. В файле locals.tf опишите в одном local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
+
+2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
+
+3. Примените изменения.
+
+
+**Решение 5**
+
+Закомментируем старые значения в файле variables.tf и впишем новые для формирования locals
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/3764c93b1d6ede20df4295cecdcf7e6e6fdc2f9c/IMG/25.jpg)
+
+
+Опишем locals переменные 
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/3764c93b1d6ede20df4295cecdcf7e6e6fdc2f9c/IMG/26.jpg)
+
+
+И теперь изменим name на наше значение из locals
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/3764c93b1d6ede20df4295cecdcf7e6e6fdc2f9c/IMG/27.jpg)
+
+Пересоздадим машины, и все ГУД
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/706bef12814cc7b0ab28a33050489c0ff1f217dc/IMG/29.jpg)
 
 
 
