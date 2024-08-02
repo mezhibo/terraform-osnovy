@@ -76,7 +76,7 @@
 
 - И изменим значения ресурсов на минимально допустимые, 1-ядро недопустимо, делаем 2 ядра, RAM оставим 1Гб, и 5% использования CPU изменим под standard-v3 и зададим 20%
 
-![alt text](https://github.com/mezhibo/terraform-osnovy/blob/fcb66c1c7fbc49d5f89056e61e2f36c03c3e4b2f/IMG/9.jpg)
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/dd1bd8c0a0b336ef6cfba6931fe74e3ab49b7197/IMG/14.jpg)
 
 
 Теперь запускаем Terraform apply, создаем машину, и идем смотреть ее ip на веб-интрефейсе
