@@ -115,6 +115,60 @@
 **Решение 2**
 
 
+Вынесем все хардкод-значения для ресурсов yandex_compute_image и yandex_compute_instance в отдельные переменные в файл variables.tf
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/b9bc2bc5599506482fc6301392c56921bbfcd109/IMG/15.jpg)
+
+
+Теперь заполним файл main.tf новыми значениями, но уже с переменными
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/237f47ee3f6a2db0edab5e04c85f2b22ad5d7182/IMG/16.jpg)
+
+
+
+Сделаем terraform plan 
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/237f47ee3f6a2db0edab5e04c85f2b22ad5d7182/IMG/17.jpg)
+
+
+Изменений нет. Значит все верно.
+
+
+
+**Задание 3**
+
+1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные первой ВМ.
+
+2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: "netology-develop-platform-db" , cores  = 2, memory = 2, core_fraction = 20. Объявите её переменные с префиксом vm_db_ в том же файле ('vms_platform.tf'). ВМ должна работать в зоне "ru-central1-b"
+
+3. Примените изменения.
+
+
+**Решение 3**
+
+
+Создадим файл vms_platform.tf с описанием переменных для второй машины
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/5fead830d5232110ba86b11c850c5fce53b7c85b/IMG/22.jpg)
+
+
+В файле main.tf опишем ресурс и subnet для него созданными ранее переменными
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/5fead830d5232110ba86b11c850c5fce53b7c85b/IMG/23.jpg)
+
+
+Применим terraform apply
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/5fead830d5232110ba86b11c850c5fce53b7c85b/IMG/20.jpg)
+
+И посмотрим на результат в веб-интерфейсе
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/5fead830d5232110ba86b11c850c5fce53b7c85b/IMG/21.jpg)
+
 
 
 
