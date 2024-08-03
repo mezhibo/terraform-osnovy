@@ -252,7 +252,7 @@ vms_resources = {
 
 ```
 
-Создайте и используйте отдельную map(object) переменную для блока metadata, она должна быть общая для всех ваших ВМ.
+2. Создайте и используйте отдельную map(object) переменную для блока metadata, она должна быть общая для всех ваших ВМ.
 
 ```
 
@@ -264,10 +264,44 @@ metadata = {
 
 ```
 
-Найдите и закоментируйте все, более не используемые переменные проекта.
+3. Найдите и закоментируйте все, более не используемые переменные проекта.
 
-Проверьте terraform plan. Изменений быть не должно.
+4. Проверьте terraform plan. Изменений быть не должно.
 
+
+
+**Решение 6**
+
+Зокомментируем переменные, которые создавали для описания ресурсов, и создадим единую map-переменную vms_resources и внутри неё конфиги обеих ВМ в виде вложенного map(object)
+
+И создадим отдельную map(object) переменную для блока metadata.
+
+Все это внутри файла variables.tf
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/106d38c7c7e38bee23a681a0713c4aec85c94db9/IMG/37.jpg)
+
+
+- Теперь изменим блок resources в main.tf
+
+- Закомментируем metadata и обьявим ее через переменную
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/3cf22d071484b3835ea3a22bada9519e7197fa12/IMG/35.jpg)
+
+
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/3cf22d071484b3835ea3a22bada9519e7197fa12/IMG/36.jpg)
+
+
+Теперь пробуем сделать terraform plan
+
+![alt text](https://github.com/mezhibo/terraform-osnovy/blob/676177c4f04e2715eeea8bf373aaf7dc34908487/IMG/38.jpg)
+
+Все ОК!
+
+
+[ССЫЛКА НА РЕПОЗИТОРЙИ С ФАЙЛАМИ ИЗ ДОМАШНЕЙ РАБОТЫ](https://github.com/mezhibo/ter-homeworks/tree/87c47ae8841389f9cbe8eb7299afdc5ea7a9d1ec/02/src)
 
 
 
